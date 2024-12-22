@@ -1,8 +1,8 @@
-NAME = ex00
+NAME = convert
 CC = c++
 CFLAGS = -Wall -Werror -Wextra -std=c++17
 SRCS = main.cpp \
-		Bureaucrat.cpp
+		ScalarConverter.cpp
 OBJSDIR = objs/
 OBJS = $(addprefix $(OBJSDIR), $(SRCS:.cpp=.o))
 
