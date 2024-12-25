@@ -6,7 +6,7 @@
 /*   By: lucabohn <lucabohn@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/22 14:19:10 by lucabohn          #+#    #+#             */
-/*   Updated: 2024/12/22 17:09:19 by lucabohn         ###   ########.fr       */
+/*   Updated: 2024/12/25 17:52:29 by lucabohn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,7 @@
 # include <string>
 # include <iomanip>
 # include <cmath>
+# include <regex>
 
 class ScalarConverter
 {
@@ -28,5 +29,14 @@ class ScalarConverter
 	public:
 		static void	convert(std::string input);
 };
+
+bool	isChar(std::string input);
+void	convertToChar(char value);
+bool	isInt(std::string input);
+void	convertToInt(int value);
+bool	isFloat(std::string input);
+void	convertToFloat(float value);
+bool	isDouble(std::string input);
+void	convertToDouble(double value);
 
 #endif

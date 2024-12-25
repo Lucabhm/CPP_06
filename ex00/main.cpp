@@ -6,7 +6,7 @@
 /*   By: lucabohn <lucabohn@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/22 16:18:38 by lucabohn          #+#    #+#             */
-/*   Updated: 2024/12/22 16:23:17 by lucabohn         ###   ########.fr       */
+/*   Updated: 2024/12/22 17:51:13 by lucabohn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,15 +14,9 @@
 
 int	main(int argc, char **argv)
 {
-	try
-	{
+	if (argc == 2)
 		ScalarConverter::convert(argv[1]);
-	}
-	catch(const std::exception &e)
-	{
-		std::cerr << "char: impossible" << std::endl;
-		std::cerr << "int: impossible" << std::endl;
-		std::cerr << "float: impossible" << std::endl;
-		std::cerr << "double: impossible" << std::endl;
-	}	
+	else
+		std::cerr << "Wrong nbr of arguments" << std::endl;
+	return (0);
 }
