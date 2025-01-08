@@ -1,8 +1,8 @@
-NAME = convert
+NAME = serialization
 CC = c++
 CFLAGS = -Wall -Werror -Wextra -std=c++17
 SRCS = main.cpp \
-		ScalarConverter.cpp
+		Serializer.cpp
 OBJSDIR = objs/
 OBJS = $(addprefix $(OBJSDIR), $(SRCS:.cpp=.o))
 
