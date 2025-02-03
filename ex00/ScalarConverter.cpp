@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ScalarConverter.cpp                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lucabohn <lucabohn@student.42.fr>          +#+  +:+       +#+        */
+/*   By: lbohm <lbohm@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/22 14:18:52 by lucabohn          #+#    #+#             */
-/*   Updated: 2024/12/25 19:15:55 by lucabohn         ###   ########.fr       */
+/*   Updated: 2025/02/03 09:46:37 by lbohm            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,8 @@ ScalarConverter::~ScalarConverter(void) {}
 
 void	ScalarConverter::convert(std::string input)
 {
-	if (input.empty())
+	if (input.empty() || (!isChar(input) && !isInt(input)
+		&& !isFloat(input) && !isDouble(input)))
 	{
 		std::cout << "char: impossible" << std::endl;
 		std::cout << "int: impossible" << std::endl;
@@ -38,13 +39,6 @@ void	ScalarConverter::convert(std::string input)
 		convertToFloat(std::stof(input));
 	else if (isDouble(input))
 		convertToDouble(std::stod(input));
-	else
-	{
-		std::cout << "char: impossible" << std::endl;
-		std::cout << "int: impossible" << std::endl;
-		std::cout << "float: impossible" << std::endl;
-		std::cout << "double: impossible" << std::endl;
-	}
 }
 
 bool	isChar(std::string input)
@@ -84,7 +78,7 @@ bool	isInt(std::string input)
 
 void	convertToInt(int value)
 {
-	if (isprint(static_cast<char>(value)))
+	if (isprint(value))
 		std::cout << "char: '" << static_cast<char>(value) << "'" << std::endl;
 	else
 		std::cout << "char: Non displayable" << std::endl;
@@ -115,7 +109,7 @@ bool	isFloat(std::string input)
 
 void	convertToFloat(float value)
 {
-	if (isprint(static_cast<char>(value)) && !std::isnan(value) && !std::isinf(value))
+	if (isprint(value) && !std::isnan(value) && !std::isinf(value))
 		std::cout << "char: '" << static_cast<char>(value) << "'" << std::endl;
 	else if (std::isnan(value) || std::isinf(value))
 		std::cout << "char: impossible" << std::endl;
@@ -151,7 +145,7 @@ bool	isDouble(std::string input)
 
 void	convertToDouble(double value)
 {
-	if (isprint(static_cast<char>(value)) && !std::isnan(value) && !std::isinf(value))
+	if (isprint(value) && !std::isnan(value) && !std::isinf(value))
 		std::cout << "char: '" << static_cast<char>(value) << "'" << std::endl;
 	else if (std::isnan(value) || std::isinf(value))
 		std::cout << "char: impossible" << std::endl;

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ScalarConverter.hpp                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lucabohn <lucabohn@student.42.fr>          +#+  +:+       +#+        */
+/*   By: lbohm <lbohm@student.42heilbronn.de>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/22 14:19:10 by lucabohn          #+#    #+#             */
-/*   Updated: 2024/12/25 17:52:29 by lucabohn         ###   ########.fr       */
+/*   Updated: 2025/02/03 10:19:28 by lbohm            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,7 @@
 # include <iomanip>
 # include <cmath>
 # include <regex>
+# include <climits>
 
 class ScalarConverter
 {
