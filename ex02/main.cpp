@@ -6,7 +6,7 @@
 /*   By: lucabohn <lucabohn@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/08 21:20:47 by lucabohn          #+#    #+#             */
-/*   Updated: 2025/01/08 22:02:03 by lucabohn         ###   ########.fr       */
+/*   Updated: 2025/02/06 18:27:05 by lucabohn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,12 +25,17 @@ void	identify(Base &p);
 int	main(void)
 {
 	Base	*first;
+	Base	*second;
 
 	srand(static_cast<unsigned int>(time(NULL)));
 	first = generate();
+	second = generate();
 	identify(first);
 	identify(*first);
+	identify(second);
+	identify(*second);
 	delete first;
+	delete second;
 	return (0);
 }
 

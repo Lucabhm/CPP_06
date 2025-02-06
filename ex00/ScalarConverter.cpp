@@ -3,18 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ScalarConverter.cpp                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lbohm <lbohm@student.42.fr>                +#+  +:+       +#+        */
+/*   By: lucabohn <lucabohn@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/22 14:18:52 by lucabohn          #+#    #+#             */
-/*   Updated: 2025/02/03 09:46:37 by lbohm            ###   ########.fr       */
+/*   Updated: 2025/02/06 18:17:02 by lucabohn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ScalarConverter.hpp"
-
-ScalarConverter::ScalarConverter(void) {}
-
-ScalarConverter::ScalarConverter(const ScalarConverter &cpy) {}
 
 ScalarConverter	&ScalarConverter::operator= (const ScalarConverter &cpy) {return (*this);}
 

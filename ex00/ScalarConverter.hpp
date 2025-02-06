@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ScalarConverter.hpp                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lbohm <lbohm@student.42heilbronn.de>       +#+  +:+       +#+        */
+/*   By: lucabohn <lucabohn@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/22 14:19:10 by lucabohn          #+#    #+#             */
-/*   Updated: 2025/02/03 10:19:28 by lbohm            ###   ########.fr       */
+/*   Updated: 2025/02/06 18:16:52 by lucabohn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,8 +23,8 @@
 class ScalarConverter
 {
 	private:
-		ScalarConverter(void);
-		ScalarConverter(const ScalarConverter &cpy);
+		ScalarConverter(void) = delete;
+		ScalarConverter(const ScalarConverter &cpy) = delete;
 		ScalarConverter	&operator= (const ScalarConverter &cpy);
 		~ScalarConverter(void);
 	public:

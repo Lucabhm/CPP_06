@@ -6,7 +6,7 @@
 /*   By: lucabohn <lucabohn@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/08 19:16:40 by lbohm             #+#    #+#             */
-/*   Updated: 2025/01/08 20:54:27 by lucabohn         ###   ########.fr       */
+/*   Updated: 2025/02/06 18:17:45 by lucabohn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,8 +19,8 @@
 class Serializer
 {
 	private:
-		Serializer(void);
-		Serializer(const Serializer &cpy);
+		Serializer(void) = delete;
+		Serializer(const Serializer &cpy) = delete;
 		Serializer	&operator= (const Serializer &cpy);
 		~Serializer(void);
 	public:
